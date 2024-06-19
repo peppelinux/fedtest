@@ -10,8 +10,7 @@
   of the IPR status of this specification.  The IPR for this specification is
   described in the "Notices" section.  This is a public OpenID Foundation
   document and not a private document,
-  as the private="..." declaration could
-  be taken to indicate.
+  as the private="..." declaration could be taken to indicate.
 -->
 <rfc category="std" docName="openid-federation-1_0" ipr="none" xmlns:xi="http://www.w3.org/2001/XInclude">
 
