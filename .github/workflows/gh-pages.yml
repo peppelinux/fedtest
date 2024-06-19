@@ -34,15 +34,13 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    container: ghcr.io/ietf-tools/xml2rfc-base:latest
     env:
         BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
+      - name: install xml2rfc
+        run: |
+          pip install --upgrade pip
+          pip install xml2rfc
 
       - name: Show env
         run: echo "$GITHUB_CONTEXT"
