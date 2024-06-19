@@ -44,7 +44,7 @@ jobs:
         
       - name: Generate docs
         env:
-        BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
+          BRANCH_NAME: ${{ github.head_ref || github.ref_name }} 
         run: |
           echo "Building branch ${{BRANCH_NAME}}"
           mkdir html
