@@ -44,9 +44,9 @@ jobs:
         
       - name: Generate docs
         run: |
-          echo "Building branch ${{BRANCH_NAME}}"
+          echo "Building branch $BRANCH_NAME"
           mkdir html
-          xml2rfc --html openid-federation-1_0.xml --out html/${{BRANCH_NAME}}.html
+          xml2rfc --html openid-federation-1_0.xml --out html/$BRANCH_NAME.html
         env:
           BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
 
