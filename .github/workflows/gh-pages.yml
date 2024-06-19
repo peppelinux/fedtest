@@ -37,6 +37,9 @@ jobs:
     env:
         BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
       - name: install xml2rfc
         run: |
           pip install --upgrade pip
