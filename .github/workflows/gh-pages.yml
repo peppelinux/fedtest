@@ -43,7 +43,10 @@ jobs:
         
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        
+
+      - name: Show env
+        run: echo "$GITHUB_CONTEXT"
+      
       - name: Generate docs
         run: |
           echo "Building branch $BRANCH_NAME"
